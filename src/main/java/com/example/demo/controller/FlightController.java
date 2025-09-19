@@ -11,19 +11,19 @@ import java.util.List;
 
 public class FlightController {
 
-    private final FlightService service;
+  private final FlightService service;
 
-    public FlightController(FlightService service) {
-        this.service = service;
-    }
+  public FlightController(FlightService service) {
+    this.service = service;
+  }
 
-    @PostMapping
-    public Flight saveFlight(@RequestBody Flight flight) {
-        return service.save(flight);
-    }
+  @PostMapping
+  public Flight saveFlight(@RequestBody Flight flight) {
+    return service.save(flight);
+  }
 
-    @GetMapping
-    public List<Flight> getAllFlights() {
-        return service.getAll();
-    }
+  @GetMapping
+  public List<Flight> getAllFlights() {
+    return service.getAll();
+  }
 }

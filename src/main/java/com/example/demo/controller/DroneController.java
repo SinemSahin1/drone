@@ -12,18 +12,16 @@ import java.util.List;
 
 public class DroneController {
 
-    @Autowired
-    private DroneRepository droneRepository;
+  @Autowired
+  private DroneRepository droneRepository;
 
-    // Drone bilgilerini kaydet
-    @PostMapping("/info")
-    public Drone saveDrone(@RequestBody Drone drone) {
-        return droneRepository.save(drone);
-    }
+  @PostMapping("/info")
+  public Drone saveDrone(@RequestBody Drone drone) {
+    return droneRepository.save(drone);
+  }
 
-    // Kayıtlı droneları listele
-    @GetMapping("/info")
-    public List<Drone> getAllDrones() {
-        return droneRepository.findAll();
-    }
+  @GetMapping("/info")
+  public List<Drone> getAllDrones() {
+    return droneRepository.findAll();
+  }
 }

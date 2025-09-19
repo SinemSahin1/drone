@@ -5,7 +5,7 @@ import lombok.Data;
 
 @Data
 @Entity
-@Table(name = "users") // pgAdmin’deki tablo adıyla birebir
+@Table(name = "users")
 public class User {
 
     @Id

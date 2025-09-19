@@ -10,19 +10,21 @@ import java.util.List;
 @RequestMapping("/api/drones")
 public class DroneRouteController {
 
-    private final DroneRouteService routeService;
+  private final DroneRouteService routeService;
 
-    public DroneRouteController(DroneRouteService routeService) {
-        this.routeService = routeService;
-    }
+  public DroneRouteController(DroneRouteService routeService) {
+    this.routeService = routeService;
+  }
 
-    @PostMapping("/route")
-    public DroneRoute saveRoute(@RequestBody DroneRoute route) {
-        return routeService.save(route);
-    }
 
-    @GetMapping("/route")
-    public List<DroneRoute> getAllRoutes() {
-        return routeService.getAll();
-    }
+  @PostMapping("/route")
+  public DroneRoute saveRoute(@RequestBody DroneRoute route) {
+    return routeService.save(route);
+  }
+
+  // Tüm rotaları getir
+  @GetMapping("/route")
+  public List<DroneRoute> getAllRoutes() {
+    return routeService.getAll();
+  }
 }

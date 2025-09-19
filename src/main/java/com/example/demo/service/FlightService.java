@@ -12,7 +12,8 @@ public class FlightService {
     private final FlightRepository repository;
 
     public FlightService(FlightRepository repository) {
-        this.repository = repository;
+
+      this.repository = repository;
     }
 
     public Flight save(Flight flight) {
@@ -27,6 +28,7 @@ public class FlightService {
     }
 
     public List<Flight> getAll() {
-        return repository.findAll();
+
+      return repository.findAll();
     }
 }

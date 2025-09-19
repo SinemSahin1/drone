@@ -6,71 +6,68 @@ import jakarta.persistence.*;
 @Table(name = "flight")
 public class Flight {
 
-    @Id
-    @GeneratedValue(strategy = GenerationType.IDENTITY)
-    private Long id;
+  @Id
+  @GeneratedValue(strategy = GenerationType.IDENTITY)
+  private Long id;
 
-    @Column(name = "startx", nullable = false)
-    private Double startx;   // Başlangıç longitude
+  @Column(name = "startx", nullable = false)
+  private Double startx;
 
-    @Column(name = "starty", nullable = false)
-    private Double starty;   // Başlangıç latitude
+  @Column(name = "starty", nullable = false)
+  private Double starty;
+  @Column(name = "endx", nullable = false)
+  private Double endx;
+  @Column(name = "endy", nullable = false)
+  private Double endy;
 
-    @Column(name = "endx", nullable = false)
-    private Double endx;     // Bitiş longitude
+  @Column(name = "distance", nullable = false)
+  private Double distance;
 
-    @Column(name = "endy", nullable = false)
-    private Double endy;     // Bitiş latitude
+  public Long getId() {
+    return id;
+  }
 
-    @Column(name = "distance", nullable = false)
-    private Double distance; // Uçuş mesafesi (km)
+  public void setId(Long id) {
+    this.id = id;
+  }
 
-    // ---- Getter & Setter ----
-    public Long getId() {
-        return id;
-    }
+  public Double getStartx() {
+    return startx;
+  }
 
-    public void setId(Long id) {
-        this.id = id;
-    }
+  public void setStartx(Double startx) {
+    this.startx = startx;
+  }
 
-    public Double getStartx() {
-        return startx;
-    }
+  public Double getStarty() {
+    return starty;
+  }
 
-    public void setStartx(Double startx) {
-        this.startx = startx;
-    }
+  public void setStarty(Double starty) {
+    this.starty = starty;
+  }
 
-    public Double getStarty() {
-        return starty;
-    }
+  public Double getEndx() {
+    return endx;
+  }
 
-    public void setStarty(Double starty) {
-        this.starty = starty;
-    }
+  public void setEndx(Double endx) {
+    this.endx = endx;
+  }
 
-    public Double getEndx() {
-        return endx;
-    }
+  public Double getEndy() {
+    return endy;
+  }
 
-    public void setEndx(Double endx) {
-        this.endx = endx;
-    }
+  public void setEndy(Double endy) {
+    this.endy = endy;
+  }
 
-    public Double getEndy() {
-        return endy;
-    }
+  public Double getDistance() {
+    return distance;
+  }
 
-    public void setEndy(Double endy) {
-        this.endy = endy;
-    }
-
-    public Double getDistance() {
-        return distance;
-    }
-
-    public void setDistance(Double distance) {
-        this.distance = distance;
-    }
+  public void setDistance(Double distance) {
+    this.distance = distance;
+  }
 }
